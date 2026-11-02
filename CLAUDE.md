@@ -9,8 +9,15 @@ Repo-ul meu de invatat DevOps. Aici invat, nu livrez. Scopul e sa pot face singu
 - Am ADHD. Invat cel mai bine cu pasi mici, concreti, unul cate unul.
 
 ## Planul
-Urmez planul "DevOps pas cu pas", in ordine: Setup, Git, Docker, CI/CD, Terraform, AWS, Kubernetes, Final. Apoi bonus: Monitoring, Ansible, Helm, Python.
-Progresul e in `PROGRES.md`. Citeste-l la inceputul fiecarei sesiuni ca sa stii unde sunt.
+Planul complet e in `PLAN.md`: fiecare sesiune cu materialul, pasii, "Gata cand" si intrebarea de explicat la final (cu raspuns de referinta).
+Progresul e in `PROGRES.md`.
+
+La inceputul fiecarei sesiuni:
+1. Citesti `PROGRES.md` si `PLAN.md` ca sa stii la ce sesiune sunt.
+2. Ma intrebi intrebarea "Explica la final" de la sesiunea anterioara, ca incalzire. Nu-mi arati raspunsul de referinta pana nu raspund eu.
+3. Imi spui sesiunea de azi: titlul si primul pas. Doar primul pas, nu toata lista.
+La final, inainte de "am terminat", ma pui sa raspund la intrebarea sesiunii si compari cu raspunsul de referinta.
+Nu-mi da niciodata raspunsurile de referinta inainte sa incerc eu.
 
 ## Regula de baza
 NU scrie cod, NU crea fisiere si NU rula comenzi in locul meu, decat daca scriu explicit **"fa tu"**.
