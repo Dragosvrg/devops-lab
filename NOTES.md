@@ -31,3 +31,26 @@
 - `add` -> `commit` (local) -> `push` (GitHub).
 - Un commit = o schimbare logica (revert curat).
 - `sed 's/vechi/nou/' f` = afiseaza | `sed -i ...` = scrie in fisier. (flashcard)
+
+### Primul Pull Request (S8)
+- origin = numele unei adrese. git push (unde) (ce) --> git push origin main
+- origin/main = eticheta LOCALA, ultima stare cunoscuta a github, se misca doar la comenzi ce comunica cu GitHub (push, pull..?)
+- Github nu intiaza nimic spre laptop, doar invers.
+- -u = salveaza in .git/config legatura branch local <-> branch GitHub. Dupa git push -u origin newbranch, in .git/config apare:
+    [branch "newbranch"]         # setari pentru branch-ul local newbranch
+        remote = origin          # serverul cu care e legat
+        merge = refs/heads/newbranch    # branch-ul de pe acel server
+
+        ┌──────────────────────────────┬────────────────────────────┬────────────────────┐
+        │     Comanda (branch nou)     │          Rezultat          │ Salveaza legatura? │
+        ├──────────────────────────────┼────────────────────────────┼────────────────────┤
+        │ git push                     │ eroare, nu stie destinatia │ nu                 │
+        ├──────────────────────────────┼────────────────────────────┼────────────────────┤
+        │ git push origin newbranch    │ merge                      │ nu                 │
+        ├──────────────────────────────┼────────────────────────────┼────────────────────┤
+        │ git push -u origin newbranch │ merge                      │ da                 │
+        └──────────────────────────────┴────────────────────────────┴────────────────────┘
+
+    De aici inainte, cand esti pe newbranch, ajunge sa scrii git push sau git pull, iar Git citeste de acolo unde sa mearga. Fara legatura asta, un git push simplu pe branch nou se opreste cu eroare si iti cere destinatia. De aceea -u il pui doar la primul push al branch-ului; legatura ramane salvata.
+- PR = ticket; compare = doar diferenta; butonul Merge = git merge real in repo-ul de pe GitHub.
+- fetch = muta doar origin/main; pull = fetch + merge.
